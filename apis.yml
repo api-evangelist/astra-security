@@ -1,23 +1,64 @@
 aid: astra-security
+
 name: Astra Security
-description: 'Astra Security is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Astra Security provides comprehensive home and business security solutions, offering alarm systems, camera surveillance, smart home integration, and access control services across Iowa. The company emphasizes veteran ownership, 24/7 in‑house technical support, and a high customer satisfaction rating, positioning itself as a trusted provider for residential and commercial security needs.'
+
 url: https://raw.githubusercontent.com/api-evangelist/astra-security/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
+image: https://astrasecurity.com/wp-content/uploads/2026/04/237B1E89-EA15-4BDB-ACEB-7AAC4664D299_1_105_c.jpeg
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Security
+- HomeAutomation
+- IoT
+- Iowa
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/astra-security-llms.txt
+- type: Hosts
+  url: hosts/astra-security-hosts.yml
+- type: Vendors
+  url: vendors/astra-security-vendors.yml
+- type: DomainSecurity
+  url: security/astra-security-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://astrasecurity.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: "Astra Security's website provides product information but no developer program or public API documentation."
+  evidence:
+    - url: https://astrasecurity.com/contact/
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
